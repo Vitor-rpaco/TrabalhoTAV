@@ -4,6 +4,7 @@ const Pedido = require('../models/Pedido.js');
 
 let carrinho = new Carrinho();
 let codigo = 1; let nome = 'Caneta'; let cor = 'Azul'; let preco = 1.00; let qtdComprada = 2;
+let cliente = 'Marco';
 
 test('Instanciar item requisitado', () => {
 
@@ -88,6 +89,6 @@ test('pagar o pedido', () => {
     let formaDePagamento = 'Cartao de Credito';
 
     expect(carrinho.fecharPagamento(carrinho.valorTotal, 
-        endereco, formaDePagamento, carrinho.getLista()))
+        endereco, formaDePagamento, carrinho.getLista(), cliente))
     .toBeInstanceOf(Pedido);
 });

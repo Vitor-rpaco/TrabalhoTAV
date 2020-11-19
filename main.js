@@ -17,5 +17,5 @@ console.log('================================================');
 console.log(carrinho.getLista());
 
 console.log('*******************PEDIDO***********************')
-let pedido = carrinho.fecharPagamento('Rua Lauro Mauro', 'Cartão de Crédito');
-console.log(pedido.mostrarItensPedido());
+let pedido = carrinho.fecharPagamento('Rua Lauro Mauro', 'Cartão de Crédito', 'Marco');
+console.log(pedido.exibirNotaFiscal());

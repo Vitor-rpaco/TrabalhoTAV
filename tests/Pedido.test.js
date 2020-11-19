@@ -9,3 +9,9 @@ test('Calcular frete', () => {
     expect(pedido.calcularFrete())
     .toBe(target);
 });
+
+test('Exibir nota fiscal', () => {
+
+    expect(pedido.exibirNotaFiscal())
+    .toBeInstanceOf(Pedido);
+})

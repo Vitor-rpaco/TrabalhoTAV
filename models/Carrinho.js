@@ -75,13 +75,13 @@ class Carrinho{
         return valorTotal;
     }
 
-    fecharPagamento(endereco, formaDePagamento){
+    fecharPagamento(endereco, formaDePagamento, cliente){
 
         for(let i = 0; i < this.listaDeItens.length; i++)
         this.listaDeItens[i].produto = {};
 
         let pedido = new Pedido(this.calcularTotal(), endereco, 
-        formaDePagamento, this.listaDeItens);
+        formaDePagamento, this.listaDeItens, cliente);
 
         return pedido;
     }
