@@ -10,6 +10,24 @@ test('Adicionar quantidade válida ao estoque', () => {
     .toBe(qtdPreAdicao + qtd);
 });
 
+test('Set de preços negativos', () => {
+
+    expect(produto.setPreco(-10))
+    .toBeFalsy();
+});
+
+test('Set de preço igual zero', () => {
+
+    expect(produto.setPreco(0))
+    .toBeFalsy();
+});
+
+test('Set de preços inválidos', () => {
+
+    expect(produto.setPreco('preco'))
+    .toBeFalsy();
+});
+
 test('Adicionar quantidade inválida ao estoque', () => {
 
     let qtd = 'ABC';
@@ -31,5 +49,3 @@ test('Remove quantidade inválida do estoque', () => {
     expect(produto.removeEstoque(qtd))
     .toBeFalsy();
 });
-
-//Settar preço negativo, settar preço = 0

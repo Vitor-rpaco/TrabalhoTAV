@@ -36,8 +36,12 @@ class Produto{
     }
 
     setPreco(novoPreco){
+
+        if(novoPreco <= 0 || typeof(novoPreco) != 'number')
+            return false;
         
         this.preco = novoPreco;
+        return novoPreco;
     }
 
     removeEstoque(qtd){
