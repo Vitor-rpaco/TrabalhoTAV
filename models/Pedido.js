@@ -43,4 +43,17 @@ class Pedido{
 
         return this.valorTotal*0.10;
     }
+
+    desconto(valorDoDesconto){
+
+        if(typeof(valorDoDesconto) != 'number'){
+            return false;
+        }
+
+        let valorDesconto = 1 - valorDoDesconto;
+        let novoTotal = this.valorTotal * valorDesconto;
+        this.setValorTotal(novoTotal);
+
+        return novoTotal;
+    }
 }

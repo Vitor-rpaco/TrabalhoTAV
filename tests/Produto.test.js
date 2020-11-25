@@ -31,3 +31,5 @@ test('Remove quantidade inválida do estoque', () => {
     expect(produto.removeEstoque(qtd))
     .toBeFalsy();
 });
+
+//Settar preço negativo, settar preço = 0

@@ -10,7 +10,7 @@ test('Instanciar item requisitado', () => {
 
     expect(carrinho.instanciaItem(codigo, nome, cor, preco, qtdComprada))
     .toBeInstanceOf(ItensCarrinho);
-})
+});
 
 test('Adicionar item ao carrinho', () => {
 
@@ -92,3 +92,5 @@ test('pagar o pedido', () => {
         endereco, formaDePagamento, carrinho.getLista(), cliente))
     .toBeInstanceOf(Pedido);
 });
+
+//Testar adição de itens no carrinho
